@@ -1,65 +1,67 @@
-<style>
-    * {
-        font-family: Arial
-    }
-
-    h1 {
-        color: #6B13B7;
-    }
-
-    img {
-        max-width: 300px;
-        max-height: 300px;
-    }
-
-    .product {
-        display: flex;
-        border: 2px #6B13B7 solid;
-        margin-top: 10px;
-        border-radius: 10px;
-        padding: 10px;
-    }
-
-    .heading {
-        display: flex;
-        align-items: center;
-    }
-
-    a {
-        margin-left: 10px;
-    }
-
-    h2 {
-        color: #6B13B7;
-    }
-</style>
+{% load static %}
+<link rel="stylesheet" href="{% static 'style.css' %}"/>
 
 <div class="heading">
-    <h1 style="font-family: Arial">NetShop</h1>
 
-    <a href="/">Главная</a>
-    <a href="/products">Товары</a>
-    <a href="/discounts">Акции</a>
+    <div class="logo">
+
+        <h1><span style="color: pink">Net</span>Shop</h1>
+
+    </div>
+
+    <div class="navigation">
+
+        <a href="/">Главная</a>
+        <a href="/products">Товары</a>
+        <a href="/discounts">Акции</a>
+
+    </div>
+
 </div>
 
+
+
+<div class="productList">
+
 <div class="product">
+
     <img src="https://igiroskuter.ru/images/upload/1%20%D0%9C%D0%BE%D0%BD%D0%BE%D0%BA%D0%BE%D0%BB%D0%B5%D1%81%D0%BE%20NineBot%20One%20Z6%20574Wh.jpg">
     <div>
+
         <h2>Mоноколесо</h2>
         <p>Моноколесо́ — средство индивидуальной мобильности, представляющее собой электрический самобалансирующийся уницикл (моноцикл) с одним колесом и расположенными
-            по обе стороны от колеса подножками. Моноколесо использует гироскоп и акселерометр для отслеживания положения вместе с электродвигателем для автоматической
-            балансировки плоскости педалей вперед и назад. Влево и вправо балансировка осуществляется человеком (моноколёсником или райдером) и управляется наклоном тела и
-            поворотом всего устройства вправо-влево ногами. Таким образом поддерживается динамическое равновесие, как на велосипеде.</p>
+            по обе стороны от колеса подножками.</p>
+
     </div>
-    <button>Купить</button>
+
+    <div class="priceSection">
+
+        <h3>19 990 ₽</h3>
+        <button>Купить</button>
+
+    </div>
+
 </div>
 
 <div class="product">
+
     <img src="https://static.abc.ru/unsafe/1040x0/abc.ru/upload/catalog/cs/0u/1589439709.5799cs0uz7g3fpruwnyz2iu49ibqlq8zfs8g_jd8.jpg">
+
     <div>
+
         <h2>Смарт часы</h2>
         <p>Умные часы (англ. smart watch), также смартчасы или часофон — компьютеризированные наручные часы с расширенной функциональностью (кроме стандартного слежения за
             временем), часто сравнимой со смартфонами.</p>
+
     </div>
-    <button>Купить</button>
+
+    <div class="priceSection">
+
+        <h3>19 990 ₽</h3>
+        <button>Купить</button>
+
+    </div>
+
+</div>
+
 </div>
