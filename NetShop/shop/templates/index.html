@@ -23,45 +23,18 @@
 
 <div class="productList">
 
+    {% for product in products %}
 <div class="product">
-
-    <img src="https://igiroskuter.ru/images/upload/1%20%D0%9C%D0%BE%D0%BD%D0%BE%D0%BA%D0%BE%D0%BB%D0%B5%D1%81%D0%BE%20NineBot%20One%20Z6%20574Wh.jpg">
+    <img src="{{ product.image_url }}">
     <div>
-
-        <h2>Mоноколесо</h2>
-        <p>Моноколесо́ — средство индивидуальной мобильности, представляющее собой электрический самобалансирующийся уницикл (моноцикл) с одним колесом и расположенными
-            по обе стороны от колеса подножками.</p>
-
+        <h2>{{ product.name }}</h2>
+        <p>{{ product.description }}</p>
     </div>
-
     <div class="priceSection">
-
-        <h3>19 990 ₽</h3>
+        <h3>{{ product.price }} ₽</h3>
         <button>Купить</button>
-
     </div>
-
 </div>
-
-<div class="product">
-
-    <img src="https://static.abc.ru/unsafe/1040x0/abc.ru/upload/catalog/cs/0u/1589439709.5799cs0uz7g3fpruwnyz2iu49ibqlq8zfs8g_jd8.jpg">
-
-    <div>
-
-        <h2>Смарт часы</h2>
-        <p>Умные часы (англ. smart watch), также смартчасы или часофон — компьютеризированные наручные часы с расширенной функциональностью (кроме стандартного слежения за
-            временем), часто сравнимой со смартфонами.</p>
-
-    </div>
-
-    <div class="priceSection">
-
-        <h3>19 990 ₽</h3>
-        <button>Купить</button>
-
-    </div>
-
-</div>
+    {% endfor %}
 
 </div>
