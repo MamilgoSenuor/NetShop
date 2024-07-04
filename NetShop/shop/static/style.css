@@ -43,8 +43,16 @@
     color: #8A11B6;
 }
 
-h2 {
+.textPupl {
     color: #8A11B6;
+}
+
+.textGreen {
+    color: #04aa6d;
+}
+
+.textRed {
+    color: #aa0404;
 }
 
 .logo {
@@ -123,4 +131,14 @@ a {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+}
+
+.reviewHeader {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.reviewHeader * {
+    margin: 0;
 }

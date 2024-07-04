@@ -52,3 +52,25 @@
     </div>
     {% endif %}
 </div>
+
+    <h1>Отзывы:</h1>
+
+    <div class="reviews">
+        {% for Review in reviews %}
+        <div class="review">
+            <div class="reviewHeader">
+                 <h2>{{ review.author }}</h2>
+
+                {% if review.rating == 1 %}
+                <h2 class="textGreen">Положительная</h2>
+                {% else %}
+                <h2 class="textRed">Отрицательная</h2>
+                {% endif %}
+            </div>
+            <p>
+                {{ review.text }}
+            </p>
+        </div>
+        {% endfor %}
+    </div>
+</div>
