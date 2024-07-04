@@ -51,12 +51,56 @@
         </p>
     </div>
     {% endif %}
+
+    {% if product.processor %}
+    <div class="charRow">
+        <p>
+            Процессор:
+        </p>
+        <p>
+            {{ product.processor }}
+        </p>
+    </div>
+    {% endif %}
+
+    {% if product.ram_size %}
+    <div class="charRow">
+        <p>
+            Оперативная память:
+        </p>
+        <p>
+            {{ product.ram_size }}
+        </p>
+    </div>
+    {% endif %}
+
+    {% if product.speed %}
+    <div class="charRow">
+        <p>
+            Скорость:
+        </p>
+        <p>
+            {{ product.speed }}
+        </p>
+    </div>
+    {% endif %}
+
+    {% if product.battery_capacity %}
+    <div class="charRow">
+        <p>
+            Ёмкость батареи:
+        </p>
+        <p>
+            {{ product.battery_capacity }}
+        </p>
+    </div>
+    {% endif %}
 </div>
 
     <h1>Отзывы:</h1>
 
     <div class="reviews">
-        {% for Review in reviews %}
+
         <div class="review">
             <div class="reviewHeader">
                  <h2>{{ review.author }}</h2>
@@ -71,6 +115,6 @@
                 {{ review.text }}
             </p>
         </div>
-        {% endfor %}
+
     </div>
 </div>
