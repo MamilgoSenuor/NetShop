@@ -142,3 +142,39 @@ a {
 .reviewHeader * {
     margin: 0;
 }
+
+.createReviewForm {
+    display: flex;
+    flex-direction: column;
+}
+
+.createReviewForm * {
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+.inputElement {
+    padding: 5px;
+    border-radius: 10px;
+    border: 2px solid #a6a6a6;
+}
+
+.payment {
+    width: 30%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.vspace {
+    height: 20px;
+}
+
+.paymentDetailsForm {
+    display: flex;
+    flex-direction: column;
+}
+
+.paymentDetailsForm label {
+    margin-top: 10px;
+    margin-bottom: 5px;
+}

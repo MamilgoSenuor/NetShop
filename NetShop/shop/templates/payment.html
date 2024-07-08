@@ -1,0 +1,38 @@
+
+
+<div class="heading">
+    <div class="logo">
+        <h1 class="logoText"><span style="color: pink">Net</span>Shop</h1>
+    </div>
+</div>
+
+<div class="payment">
+    <h1>Товар: {{product.name}}</h1>
+    <h2>К оплате: {{product.price}} ₽</h2>
+
+    <div class="vspace"></div>
+
+    <h2>Реквизиты для перевода:</h2>
+    <p><i class="fa-solid fa-phone-volume"></i> +78005553535</p>
+    <p><i class="fa-solid fa-user"></i> Иванов Иван Иванович</p>
+
+    <div class="vspace"></div>
+
+    <h2>Данные для доставки</h2>
+    <form class="paymentDetailsForm" method="POST">
+        {% csrf_token %}
+
+        <label>Ваше ФИО:</label>
+        <input class="inputElement" name="fullname">
+
+        <label>Адрес доставки:</label>
+        <input class="inputElement" name="address">
+
+        <label>Номер телефона для связи:</label>
+        <input class="inputElement" name="phone">
+
+        <div class="vspace"></div>
+
+        <button>Оплатил</button>
+    </form>
+</div>

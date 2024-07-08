@@ -97,24 +97,46 @@
     {% endif %}
 </div>
 
-    <h1>Отзывы:</h1>
+  <h1>Отзывы:</h1>
 
     <div class="reviews">
         {% for review in reviews %}
         <div class="review">
             <div class="reviewHeader">
-                 <h2>{{ review.author }}</h2>
+                <h2>{{ review.author }}</h2>
 
                 {% if review.rating == 1 %}
                 <h2 class="textGreen">Положительная</h2>
                 {% else %}
                 <h2 class="textRed">Отрицательная</h2>
                 {% endif %}
+
             </div>
             <p>
                 {{ review.text }}
             </p>
         </div>
         {% endfor %}
+    </div>
+
+    <h1>Создать отзыв:</h1>
+    <div class="createReview">
+        <form class="createReviewForm" method="POST">
+            {% csrf_token %}
+
+            <label for="author">Автор:</label>
+            <input name="author" class="inputElement" />
+
+            <label for="rating">Оценка:</label>
+            <select name="rating" class="inputElement">
+                <option value="1">Положительная</option>
+                <option value="0">Отрицательная</option>
+            </select>
+
+            <label for="text">Текст отзыва:</label>
+            <textarea name="text" rows="10" class="inputElement"></textarea>
+
+            <button>Отправить отзыв</button>
+        </form>
     </div>
 </div>
