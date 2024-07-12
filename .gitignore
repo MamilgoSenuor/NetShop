@@ -1,2 +1,3 @@
 venv/
 NetShop/db.sqlite3
+NetShop/shop/config.py
